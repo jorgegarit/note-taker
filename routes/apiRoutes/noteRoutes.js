@@ -22,3 +22,5 @@ router.post('/notes', (req, res) => {
     const newNote = createNotes(req.body, notes);
     res.json(newNote);
 });
+
+module.exports = router;
