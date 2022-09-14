@@ -18,7 +18,8 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // use apiRoutes
-
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
 // method to make our server listen
 app.listen(PORT, () => {
