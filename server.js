@@ -7,6 +7,9 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
+
 // adding middleware for POST request
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -14,7 +17,8 @@ app.use(express.json());
 // this will serve the js and css from displaying to html page once loaded
 app.use(express.static('public'));
 
-// In this section I will add the use Routes, once i have created them
+// use apiRoutes
+
 
 // method to make our server listen
 app.listen(PORT, () => {
